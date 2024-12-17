@@ -1,54 +1,75 @@
-v1=["hihi","what is code","what is vscode","zed","what is a train"]
-r=0
-i=[]
-t=56
-str_2="what is  v coee"
-def main(str_):
-    str_1=str_
-    global a
+import colorama
+from colorama import Fore
+
+from time import sleep
+
+w=input("enter your weight in kgs -> ")
+h=input("enter your height in meters -> ")
+age=input("enter your age -> ")
+age=float(age)
+w=float(w)
+h=float(h)
+hcm=h/100
+bmi=w/h**2
+bmr=10*w+6.25*hcm-5*age+5
+print(f"bmi {round(bmi)}")
+print(f"bmr {bmr}")
+if bmi <18:
+    print("underweight")
+elif bmi >18  and bmi <25 :
+    print("normal")
+elif bmi >25  and bmi <30 :
+    print("overweight")
+elif bmi >30  and bmi <40 :
+    print("obese")
+elif  bmi >40 :
+    print("extermly obese")
+print("18 and less is under weight. 18 to 25 is normal, 25 to 30 is overweight, 30 to 40 is obese ,And over 40 extermly obese")
+map=[[0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0],
+     [0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0],
+     [0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0],
+     [0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0],
+     [0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0],
+     [0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0],
+     [0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0],
+     [0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0],
+     [0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0],
+     [0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0],
+     [0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0],
+     [0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0],
+     [0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0],
+     [0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0],
+     [0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0],
+     [0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0]]
+
+def render_map():
+
+    for i in range(len(map)):
+        for x in range(len(map[i])):
+            if map[i][x] ==0:
+             print("   ",end="")
+
+            if map[i][x] ==1:
+             
+             print(f"{Fore.GREEN} | ",end="")
+
+            if map[i][x] ==2:
+             
+             print(f"{Fore.BLUE} . ",end="")
+
+             
+        print("")
+        
 
 
+    
 
 
+        
+    
+   
+      
+    
+render_map()
 
-
-    a=0
-
-    s1=str_1.replace(" ",'')
-    s2=str_2.replace(" ",'')
-
-
-
-    for x in range(len(s1)):
-        if len(s1) >len(s2):
-
-            s2=s2+"_"
-
-        if len(s1) <len(s2):
-
-            s1=s1+"_"
-
-
-
-        if s1[x] in s2[x] :
-
-            a=a+1
-
-
-
-    return round(a/len(s1)*100)
-
-
-
-for n in range(len(v1)):
-    c=main(v1[n])
-    print(c)
-    if c>t:
-
-        print(v1[n])
-        r=r+1
-        i.append(v1[n])
-
-# print(r)
-if r >1 and r<3:
-    print(f"did you mean -> '{i[0]}' or '{i[1]}'")
+     

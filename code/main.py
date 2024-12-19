@@ -18,7 +18,7 @@ print(" ")
 act=input("enter how active your are  -> ")
 print(" ")
 age=float(age)
-act=float(act)
+act=str(act)
 w=float(w)
 h=float(h)
 hcm=h/100
@@ -26,7 +26,7 @@ bmi=w/h**2
 bmr=10*w+6.25*hcm-5*age+5
 status=""
 act1=""
-
+print(" ")
 print(f"bmi {round(bmi)}")
 print(" ")
 

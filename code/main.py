@@ -25,11 +25,11 @@ hcm=h/100
 bmi=w/h**2
 bmr=10*w+6.25*hcm-5*age+5
 status=""
+act1=""
 
 print(f"bmi {round(bmi)}")
 print(" ")
-print(f"bmr {bmr}")
-print(" ")
+
 if bmi <18.5:
     print("underweight")
     status="underweight"
@@ -45,6 +45,25 @@ elif bmi >30  and bmi <40 :
 elif  bmi >40 :
     print("extermly obese")
     status="extermly obese"
+if act=="no":
+    bmr=bmr*1.2
+    act=act1
+if act=="light":
+    bmr=bmr*1.375
+    act=act1
+if act=="normal":
+    bmr=bmr*1.55
+    act=act1
+if act=="bit more":
+    bmr=bmr*1.725
+    act=act1
+if act=="very more":
+    bmr=bmr*1.725
+    act=act1
+
+
+print(f"bmr {bmr}")
+
 print(" ")
 print("18 and less is under weight. 18 to 25 is normal, 25 to 30 is overweight, 30 to 40 is obese ,And over 40 extermly obese")
 print(" ")

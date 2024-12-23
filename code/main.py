@@ -193,14 +193,14 @@ try:
               t1 = json.load(file)
   if status == "underweight":
 
-      string_print1(f"{t1["treatment1"][0][0]}",0.08,Fore.LIGHTYELLOW_EX)
-      
-      string_print1(f"{t1["treatment1"][1][0]}",0.08,Fore.LIGHTYELLOW_EX)
-      
-      string_print1(f"{t1["treatment1"][2][0]}",0.08,Fore.LIGHTYELLOW_EX)
-      
-      string_print1(f"{t1["treatment1"][3][0]}",0.08,Fore.LIGHTYELLOW_EX)
-      
+      string_print1(f"{t1["treatment1"][0][0]}",0.02,Fore.LIGHTYELLOW_EX)
+
+      string_print1(f"{t1["treatment1"][1][0]}",0.02,Fore.LIGHTYELLOW_EX)
+
+      string_print1(f"{t1["treatment1"][2][0]}",0.02,Fore.LIGHTYELLOW_EX)
+
+      string_print1(f"{t1["treatment1"][3][0]}",0.02,Fore.LIGHTYELLOW_EX)
+
       
     
   if status == "normal":

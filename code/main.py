@@ -53,6 +53,7 @@ try:
   gen=str(gen)
   hcm=h/100
   bmi=w/h**2
+  bmr=0
   if "boy" in gen:
    bmr=10*w+6.25*hcm-5*age+5
   if "girl" in gen:
@@ -204,7 +205,7 @@ try:
 
                 string_print2(" - ",0.02,Fore.RED)
           print("")
-          
+
 
 
 
@@ -216,7 +217,7 @@ try:
 
 
   #render_map()
-  r1()
+  render_map()
 
   print("  ")
   print(" ",end=" ")
